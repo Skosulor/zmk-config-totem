@@ -33,17 +33,101 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
+        right_ctrl {
+            bindings = <&kp RIGHT_CONTROL>;
+            key-positions = <19 20>;
         };
 
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog TVP1>;
+        right_gui {
+            bindings = <&kp RIGHT_GUI>;
+            key-positions = <20 21>;
         };
+
+        right_alt {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <21 22>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <19 21>;
+        };
+
+        left_control {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <16 15>;
+        };
+
+        left_gui {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <15 14>;
+        };
+
+        left_alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <13 14>;
+        };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <14 16>;
+        };
+
+        sweChar1 {
+            bindings = <&kp SQT>;
+            key-positions = <26 27>;
+        };
+
+        sweChar2 {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <27 28>;
+        };
+
+        rightBracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <31 32>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <32 33>;
+        };
+
+        left_bracket {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <26 28>;
+        };
+
+        right_parantheses {
+            bindings = <&kp LS(RIGHT_PARENTHESIS)>;
+            key-positions = <31 33>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <15 28>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <20 31>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <15 26>;
+        };
+
+        backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <20 33>;
+        };
+
+        graveTilde {
+            bindings = <&kp GRAVE>;
+            key-positions = <33 34>;
+        };
+
     };
 
     macros {
@@ -88,7 +172,8 @@
             &kp Q       &kp W  &kp E    &kp R        &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
             &kp A       &kp S  &kp D    &kp F        &kp G        &kp H    &kp J        &kp K        &kp L       &kp SEMI
 &kp LSHIFT  &kp Z       &kp X  &kp C    &kp V        &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH    &kp RSHIFT
-                                     &kp DEL  &lt NAV TAB  &kp SPACE    &kp RET  &lt SYM ESC  &kp BSPC
+                                        &kp LA(LG(LEFT_CONTROL))  &mo 3  &kp SPACE    &lt 1 ENTER  &kp ESCAPE  &kp TAB
+                                     //&kp DEL  &lt NAV TAB  &kp SPACE    &kp RET  &lt SYM ESC  &kp BSPC
             >;
         };
 
