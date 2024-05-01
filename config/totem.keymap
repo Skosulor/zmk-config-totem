@@ -13,7 +13,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define NAV  1
@@ -146,6 +145,15 @@
         };
     };
 
+    behaviors {
+        shiftCapsWord: shiftCapsWord {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFTCAPSWORD";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_SHIFT>, <&caps_word>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -168,11 +176,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q       &kp W  &kp E    &kp R        &kp T        &kp Y    &kp U        &kp I        &kp O       &kp P
-            &kp A       &kp S  &kp D    &kp F        &kp G        &kp H    &kp J        &kp K        &kp L       &kp SEMI
-&kp LSHIFT  &kp Z       &kp X  &kp C    &kp V        &kp B        &kp N    &kp M        &kp COMMA    &kp DOT     &kp FSLH    &kp RSHIFT
-                                        &kp LA(LG(LEFT_CONTROL))  &mo 3  &kp SPACE    &lt 1 ENTER  &kp ESCAPE  &kp TAB
-                                     //&kp DEL  &lt NAV TAB  &kp SPACE    &kp RET  &lt SYM ESC  &kp BSPC
+            &kp Q  &kp W  &kp E  &kp R           &kp T        &kp Y        &kp U       &kp I      &kp O    &kp P
+            &kp A  &kp S  &kp D  &kp F           &kp G        &kp H        &kp J       &kp K      &kp L    &kp SEMI
+&kp LSHIFT  &kp Z  &kp X  &kp C  &kp V           &kp B        &kp N        &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                          &mo 3  &sk LEFT_SHIFT  &kp SPACE    &lt 1 ENTER  &kp ESCAPE  &kp TAB
             >;
         };
 
@@ -180,11 +187,10 @@
 
         nav_layer {
             label = "lower";
-
             bindings = <
-  &none            &none         &none                     &none         &none           &none         &none          &none         &none                 &none                  
-  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3              &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0
-  &none  &kp EXCLAMATION  &kp AT        &kp HASH                  &kp DOLLAR    &kp PERCENT     &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+       &none            &none         &none                     &none         &none           &none         &none          &none         &none                 &none
+       &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3              &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0
+&none  &kp EXCLAMATION  &kp AT        &kp HASH                  &kp DOLLAR    &kp PERCENT     &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
                                       &kp LA(LG(LEFT_CONTROL))  &none         &kp SPACE       &kp RET       &none          &none
             >;
         };
@@ -192,13 +198,11 @@
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         sim_layer {
-
             label = "SYM";
-
             bindings = <
-       &none           &kp MINUS             &kp UNDERSCORE         &kp PLUS         &kp EQUAL    &none    &none       &none    &none  &none       
-       &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &kp TILDE    &none    &none       &none    &none  &none       
-&none  &kp SLASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH    &kp GRAVE    &none    &none       &none    &none  &none  &none
+       &none           &kp MINUS             &kp UNDERSCORE         &kp PLUS         &kp EQUAL    &none  &none  &none  &none  &none
+       &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &kp TILDE    &none  &none  &none  &none  &none
+&none  &kp SLASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH    &kp GRAVE    &none  &none  &none  &none  &none  &none
             >;
         };
 
@@ -206,19 +210,15 @@
 
         adjust_layer {
             label = "ADJ";
-
             bindings = <
-            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp C_VOL_UP            
-            &kp F11       &kp F12       &none         &kp PRINTSCREEN  &none           &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp C_VOLUME_DOWN       
+            &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp C_VOL_UP
+            &kp F11       &kp F12       &none         &kp PRINTSCREEN  &none           &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp C_VOLUME_DOWN
 &bt BT_CLR  &kp F1        &kp F2        &kp F3        &kp F4           &kp F5          &kp F6    &kp F7         &kp F8       &kp F9     &kp F10            &none
                                         &none         &none            &kp SPACE       &kp RET   &kp ESCAPE     &kp TAB
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
     };
 };
