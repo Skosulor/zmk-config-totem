@@ -150,6 +150,7 @@
     behaviors {
         shiftCapsWord: shiftCapsWord {
             compatible = "zmk,behavior-tap-dance";
+            quick-release;
             label = "SHIFTCAPSWORD";
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
