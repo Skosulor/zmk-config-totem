@@ -37,6 +37,7 @@
         right_ctrl {
             bindings = <&kp RIGHT_CONTROL>;
             key-positions = <16 17>;
+            require-prior-idle-ms = <50>;
         };
 
         right_gui {
