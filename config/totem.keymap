@@ -171,6 +171,16 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
         };
+
+        navEnter: navEnter {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NAVENTER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
+            retro-tap;
+        };
     };
 
     keymap {
@@ -195,10 +205,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q  &kp W  &kp E  &kp R           &kp T        &kp Y        &kp U       &kp I      &kp O    &kp P
-            &kp A  &kp S  &kp D  &kp F           &kp G        &kp H        &kp J       &kp K      &kp L    &kp SEMI
-&kp LSHIFT  &kp Z  &kp X  &kp C  &kp V           &kp B        &kp N        &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                          &mo 3  &shiftCapsWord  &kp SPACE    &lt 1 ENTER  &kp ESCAPE  &kp TAB
+            &kp Q  &kp W  &kp E              &kp R           &kp T        &kp Y  &kp U       &kp I      &kp O    &kp P
+            &kp A  &kp S  &kp D              &kp F           &kp G        &kp H  &kp J       &kp K      &kp L    &kp SEMI
+&kp LSHIFT  &kp Z  &kp X  &kp C              &kp V           &kp B        &kp N  &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                          &navEnter 3 ENTER  &shiftCapsWord  &kp SPACE    &sl 1  &kp ESCAPE  &kp TAB
             >;
         };
 
