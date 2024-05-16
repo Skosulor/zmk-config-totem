@@ -35,7 +35,7 @@
         compatible = "zmk,combos";
 
         right_ctrl {
-            bindings = <&kp RIGHT_CONTROL>;
+            bindings = <&sk RCTRL>;
             key-positions = <16 17>;
             require-prior-idle-ms = <50>;
         };
