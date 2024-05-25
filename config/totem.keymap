@@ -256,10 +256,10 @@
 
         TabEnter {
             bindings = <
-        &trans  &trans  &kp LA(F4)  &trans  &trans    &trans    &trans    &trans        &trans     &trans
-        &trans  &trans  &kp TAB     &trans  &trans    &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &trans  &trans  &trans      &trans  &trans    &trans    &trans    &trans        &trans     &trans  &trans
-                        &trans      &trans  &trans    &trans    &trans    &trans
+        &trans  &trans  &kp LA(F4)  &trans     &trans    &trans    &trans    &trans        &trans     &trans
+        &trans  &trans  &kp TAB     &kp ENTER  &trans    &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans      &trans     &trans    &trans    &trans    &trans        &trans     &trans  &trans
+                        &trans      &trans     &trans    &trans    &trans    &trans
             >;
         };
 
