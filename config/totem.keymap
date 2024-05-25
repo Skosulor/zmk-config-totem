@@ -145,12 +145,6 @@
             key-positions = <29 30>;
             require-prior-idle-ms = <50>;
         };
-
-        enter {
-            bindings = <&kp RET>;
-            key-positions = <35 16>;
-            timeout-ms = <0>;
-        };
     };
 
     macros {
