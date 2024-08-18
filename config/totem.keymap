@@ -145,6 +145,16 @@
             key-positions = <29 30>;
             require-prior-idle-ms = <50>;
         };
+
+        quote {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <1 2>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <7 8>;
+        };
     };
 
     macros {
