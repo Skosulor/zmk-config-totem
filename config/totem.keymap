@@ -155,6 +155,11 @@
             bindings = <&kp UNDERSCORE>;
             key-positions = <7 8>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <2 3>;
+        };
     };
 
     macros {
