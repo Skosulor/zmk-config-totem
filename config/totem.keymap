@@ -231,10 +231,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W  &kp F  &kp P           &kp G                    &kp J              &kp L       &kp U      &kp Y    &kp SEMI
-           &kp A  &kp R  &kp S  &kp T           &kp D                    &kp H              &kp N       &kp E      &kp I    &kp O
-&kp ENTER  &kp Z  &kp X  &kp C  &kp V           &kp B                    &kp K              &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp TAB
-                         &mo 2  &sk LEFT_SHIFT  &urubLayerTap 3 SPACE    &navEnter 1 ENTER  &kp ESCAPE  &none
+       &kp Q  &kp W  &kp F  &kp P           &kp G                    &kp J              &kp L       &kp U      &kp Y    &kp SEMI
+       &kp A  &kp R  &kp S  &kp T           &kp D                    &kp H              &kp N       &kp E      &kp I    &kp O
+&sl 1  &kp Z  &kp X  &kp C  &kp V           &kp B                    &kp K              &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp TAB
+                     &mo 2  &sk LEFT_SHIFT  &urubLayerTap 3 SPACE    &navEnter 1 ENTER  &kp ESCAPE  &none
             >;
         };
 
@@ -243,10 +243,10 @@
         number_layer {
             label = "lower";
             bindings = <
-       &none            &none         &none                     &none         &none           &none         &caps_word     &kp TAB       &none                 &none
-       &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3              &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0
-&none  &kp EXCLAMATION  &kp AT        &kp HASH                  &kp DOLLAR    &kp PERCENT     &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-                                      &kp LA(LG(LEFT_CONTROL))  &none         &kp SPACE       &kp RET       &none          &none
+       &kp LG(NUMBER_1)  &kp LG(N2)    &kp LG(N3)                &kp LG(N4)    &kp LG(N5)      &kp LG(N6)    &kp LG(N7)     &kp LG(N8)    &kp LG(N9)            &kp LG(N0)
+       &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3              &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9          &kp NUMBER_0
+&none  &kp EXCLAMATION   &kp AT        &kp HASH                  &kp DOLLAR    &kp PERCENT     &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+                                       &kp LA(LG(LEFT_CONTROL))  &none         &kp SPACE       &kp RET       &none          &none
             >;
         };
 
