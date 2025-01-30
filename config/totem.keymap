@@ -103,7 +103,7 @@
         minus {
             bindings = <&kp MINUS>;
             key-positions = <28 29>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <20>;
         };
 
         left_bracket {
