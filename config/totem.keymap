@@ -109,7 +109,7 @@
         left_bracket {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <22 24>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <0>;
         };
 
         right_parantheses {
@@ -157,7 +157,7 @@
         underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <7 8>;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <50>;
         };
 
         tab {
