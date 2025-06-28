@@ -217,6 +217,15 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
         };
+
+        shift_tab: shift_tab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFT_TAB";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -241,10 +250,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &kp Q  &kp W  &kp F    &kp P           &kp G                    &kp J              &kp L       &kp U      &kp Y    &kp SEMI
-                  &kp A  &kp R  &kp S    &kp T           &kp D                    &kp H              &kp N       &kp E      &kp I    &kp O
-&kp LEFT_BRACKET  &kp Z  &kp X  &kp C    &kp V           &kp B                    &kp K              &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                                &kp TAB  &kp LEFT_SHIFT  &urubLayerTap 3 SPACE    &navEnter 1 ENTER  &kp ESCAPE  &mo 2
+                  &kp Q  &kp W  &kp F    &kp P                      &kp G                    &kp J              &kp L       &kp U      &kp Y    &kp SEMI
+                  &kp A  &kp R  &kp S    &kp T                      &kp D                    &kp H              &kp N       &kp E      &kp I    &kp O
+&kp LEFT_BRACKET  &kp Z  &kp X  &kp C    &kp V                      &kp B                    &kp K              &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
+                                &kp TAB  &shift_tab LEFT_SHIFT TAB  &urubLayerTap 3 SPACE    &navEnter 1 ENTER  &kp ESCAPE  &mo 2
             >;
         };
 
