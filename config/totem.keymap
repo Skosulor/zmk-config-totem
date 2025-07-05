@@ -250,10 +250,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                  &kp Q  &kp W  &kp F    &kp P                      &kp G                    &kp J              &kp L       &kp U      &kp Y    &kp SEMI
-                  &kp A  &kp R  &kp S    &kp T                      &kp D                    &kp H              &kp N       &kp E      &kp I    &kp O
-&kp LEFT_BRACKET  &kp Z  &kp X  &kp C    &kp V                      &kp B                    &kp K              &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp SQT
-                                &kp TAB  &shift_tab LEFT_SHIFT TAB  &urubLayerTap 3 SPACE    &navEnter 1 ENTER  &kp ESCAPE  &mo 2
+                &kp Q  &kp W  &kp F       &kp P  &kp G                    &kp J              &kp L       &kp U      &kp Y    &kp SEMI
+                &kp A  &kp R  &kp S       &kp T  &kp D                    &kp H              &kp N       &kp E      &kp I    &kp O
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C       &kp V  &kp B                    &kp K              &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp TAB
+                              &caps_word  &sl 1  &urubLayerTap 3 SPACE    &navEnter 1 ENTER  &kp ESCAPE  &mo 2
             >;
         };
 
@@ -277,7 +277,7 @@
             bindings = <
             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4    &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp C_VOL_UP
             &kp F11       &kp F12       &caps_word    &kp PRINTSCREEN  &none           &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT  &kp C_VOLUME_DOWN
-&bt BT_CLR  &kp F1        &kp F2        &kp F3        &kp F4           &kp F5          &kp F6    &kp F7         &kp F8       &kp F9     &kp F10            &none
+&bt BT_CLR  &kp F1        &kp F2        &kp F3        &kp F4           &kp F5          &kp F6    &kp F7         &kp F8       &kp F9     &kp F10            &to 4
                                         &none         &none            &kp SPACE       &kp RET   &kp ESCAPE     &kp TAB
             >;
         };
@@ -288,6 +288,15 @@
         &kp F11  &kp F12  &kp TAB     &kp ENTER  &kp PRINTSCREEN    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp C_VOLUME_DOWN
 &trans  &kp F1   &kp F2   &kp F3      &kp F4     &kp F5             &kp F6    &kp F7         &kp F8        &kp F9     &kp F10            &trans
                           &trans      &trans     &trans             &trans    &trans         &trans
+            >;
+        };
+
+        swe {
+            bindings = <
+                  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&kp LEFT_BRACKET  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &kp SQT
+                                  &trans  &trans  &trans    &trans  &trans  &to 0
             >;
         };
 
