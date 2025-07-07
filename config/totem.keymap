@@ -253,7 +253,7 @@
                 &kp Q  &kp W  &kp F       &kp P           &kp G                    &kp J              &kp L       &kp U      &kp Y    &kp SEMI
                 &kp A  &kp R  &kp S       &kp T           &kp D                    &kp H              &kp N       &kp E      &kp I    &kp O
 &sk LEFT_SHIFT  &kp Z  &kp X  &kp C       &kp V           &kp B                    &kp K              &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp TAB
-                              &caps_word  &kp LEFT_SHIFT  &urubLayerTap 3 SPACE    &navEnter 1 ENTER  &kp ESCAPE  &mo 2
+                              &caps_word  &sk LEFT_SHIFT  &urubLayerTap 3 SPACE    &navEnter 1 ENTER  &kp ESCAPE  &mo 2
             >;
         };
 
